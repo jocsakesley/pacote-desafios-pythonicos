@@ -15,7 +15,14 @@ onde todas as instancias de stra foram substituidas por strb.
 
 def fix_start(s):
     # +++ SUA SOLUÇÃO +++
-    return
+    lista = []
+    for i, v in enumerate(s):
+        if i > 0:
+            lista.append(v)
+    return s[0] + ''.join(lista).replace(s[0], '*')
+
+
+
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---

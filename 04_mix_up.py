@@ -11,10 +11,13 @@ Exemplo:
 
 Assuma que a e b tem tamanho 2 ou maior.
 """
-
+#a = pax, b = dog
 def mix_up(a, b):
     # +++ SUA SOLUÇÃO +++
-    return
+    t = b[:2] + a[2:]
+    b = a[:2] + b[2:]
+    a = t
+    return f"{a} {b}"
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---

@@ -12,7 +12,24 @@ a-frente + b-frente + a-trás + b-trás
 """
 def front_back(a, b):
     # +++ SUA SOLUÇÃO +++
-    return
+    resp = []
+    if len(a)%2 == 0:
+        resp.append(a[:int(len(a)/2)])
+    else:
+        resp.append(a[:int(len(a)/2)+1])
+    if len(b)%2 == 0:
+        resp.append(b[:int(len(b)/2)])
+    else:
+        resp.append(b[:int(len(b)/2)+1])
+    if len(a)%2 == 0:
+        resp.append(a[int(len(a)/2):])
+    else:
+        resp.append(a[int(len(a)/2)+1:])
+    if len(b) % 2 == 0:
+        resp.append(b[int(len(b) / 2):])
+    else:
+        resp.append(b[int(len(b) / 2) + 1:])
+    return ''.join(resp)
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---

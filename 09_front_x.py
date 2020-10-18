@@ -13,7 +13,9 @@ antes de combina-las.
 
 def front_x(words):
     # +++ SUA SOLUÇÃO +++
-    return
+    sub = [w for w in words if w[0]=='x']
+    sub2 = [w for w in words if w[0]!='x']
+    return sorted(sub) + sorted(sub2)
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---

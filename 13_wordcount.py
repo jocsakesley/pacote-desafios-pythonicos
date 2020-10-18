@@ -57,6 +57,24 @@ import sys
 # +++ SUA SOLUÇÃO +++
 # Defina as funções print_words(filename) e print_top(filename).
 
+def print_words(filename):
+    dictionary = dict_words(filename)
+    for k, v in dictionary.items():
+        print(k, v)
+
+def print_top(filename):
+    dictionary = dict_words(filename)
+    for k, v in sorted(dictionary.items(), key=lambda x: x[1], reverse=True):
+        print(k, v)
+
+def dict_words(filename):
+    words = open(filename, 'r')
+    word = ''.join(sorted(words.read().replace(' ', '').replace('\n', '').lower()))
+    letters = {}
+    for l in word:
+        if l not in letters.items():
+            letters.update({l: word.count(l)})
+    return letters
 
 # A função abaixo chama print_words() ou print_top() de acordo com os
 # parêtros do programa.
